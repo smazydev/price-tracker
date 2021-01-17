@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import SecondaryNav from './components/SecondaryNav';
 import ItemList from './components/ItemList';
 import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <ItemList/>
         <Newsletter/>
       </section>
+      <Footer/>
     </div>
   );
 }
