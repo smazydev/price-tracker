@@ -3,7 +3,7 @@ import logo from '../static/images/logo.png';
 
 const Navbar = () => {
     return (
-        <div className="nav-container">
+        <div className="nav-container sticky">
             <div className="logo-container">
                 <img src={logo} alt="logo"/>
             </div>
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <a className="nav-link" href="Home"><li>popular products</li></a>
             </ul>
             </div>
-            <div>
+            <div className="button-container">
             <button className="signup">sign up</button>
             </div>
         </div>
