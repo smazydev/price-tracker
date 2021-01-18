@@ -47,3 +47,43 @@
     top: 0;
     width: 100%;
 }
+
+/* Hero Styles Start Here */
+.hero-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    overflow-x: hidden;
+}
+.hero-text {
+    padding: 150px;
+}
+.hero-text h1 {
+    font-size: 65px;
+    color:var(--primary-color);
+    line-height: 77px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+.hero-img img {
+    width: 1000px;
+}
+/* Search Field Styling Goes Here */
+.search input {
+    width: 550px;
+    height: 57px;
+    background-color: #F1F6F9;
+    border: 1px solid var(--grey-color);
+    padding: 10px;
+    margin-right:20px;
+    margin-bottom: 20px;
+}
+.search button {
+    background-color: var(--button-color);
+    border: 1px solid var(--button-border);
+    text-transform: capitalize;
+    width: 134px;
+    height: 57px;
+}
+.search p {
+    color:var(--grey-color);
+}
