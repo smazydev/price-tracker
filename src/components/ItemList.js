@@ -3,7 +3,11 @@ import Item from './Item';
 
 const ItemList = () => {
     return (
-        <div>
+        <div className="item-list">
+            <Item/>
+            <Item/>
+            <Item/>
+            <Item/>
             <Item/>
         </div>
     )
