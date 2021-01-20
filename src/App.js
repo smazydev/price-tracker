@@ -6,8 +6,9 @@ import ItemList from './components/ItemList';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
-
 function App() {
+
+
   return (
     <div className="App">
       <section>
