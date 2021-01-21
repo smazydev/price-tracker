@@ -4,7 +4,7 @@ import ItemSorter from "./ItemSorter";
 
 const SecondaryNav = () => {
   return (
-    <div className="nav-container no-border">
+    <div className="sec-container no-border">
       {document.documentElement.clientWidth < 600 ? (
         <>
           <ItemSorter
