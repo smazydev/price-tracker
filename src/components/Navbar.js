@@ -3,10 +3,10 @@ import logo from "../static/images/logo.png";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
-const Navbar = () => {
+const Navbar = ({width}) => {
   return (
     <div className="nav-container sticky">
-      {document.documentElement.clientWidth < 768 ? (
+      { width <= 1024 ? (
         <>
           <div className="logo-container">
             <img src={logo} alt="logo" />

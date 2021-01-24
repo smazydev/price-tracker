@@ -4,14 +4,24 @@ import instagramLogo from "../static/images/social-1_logo-instagram.png";
 import twitterLogo from "../static/images/social-1_logo-twitter.png";
 import facebookLogo from "../static/images/White_2_.png";
 
-const Footer = () => {
+const Footer = ({width}) => {
   return (
     <div className="footer-container">
-      {document.documentElement.clientWidth < 600 ? (
+      {width < 900 ? (
         <>
           <div className="logo-container">
             <img src={LogoNoText} alt="logo" />
             <p>&copy; 2020</p>
+          </div>
+          <div className="links">
+            <ul>
+              <li>
+                <h4>price.io</h4>
+              </li>
+              <li>home</li>
+              <li>trending price drops</li>
+              <li>popular products</li>
+            </ul>
           </div>
           <div className="social-media">
             <h4>follow us on</h4>
@@ -20,6 +30,7 @@ const Footer = () => {
               <img src={facebookLogo} alt="social-media logo" />
               <img src={twitterLogo} alt="social-media logo" />
             </div>
+            
           </div>
         </>
       ) : (

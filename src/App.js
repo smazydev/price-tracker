@@ -1,26 +1,39 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import SecondaryNav from './components/SecondaryNav';
-import ItemList from './components/ItemList';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
+import ItemList from './components/ItemList';
+import Navbar from './components/Navbar';
+import Newsletter from './components/Newsletter';
+import SecondaryNav from './components/SecondaryNav';
+import {useState,useEffect} from 'react';
+
 
 function App() {
 
+  const [width,setWidth] = useState(window.innerWidth);
+
+  const updateWidth = () => {
+    console.log(width);
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize",updateWidth);
+    return () => window.removeEventListener("resize",updateWidth);
+  })
 
   return (
     <div className="App">
       <section>
-          <Navbar/>
-          <Hero/>
+          <Navbar width={width}/>
+          <Hero width={width}/>
       </section>
       <section>
-        <SecondaryNav/>
+        <SecondaryNav width={width}/>
         <ItemList/>
-        <Newsletter/>
+        <Newsletter width={width} />
       </section>
-      <Footer/>
+      <Footer width={width} />
     </div>
   );
 }

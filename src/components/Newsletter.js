@@ -2,14 +2,14 @@ import React from "react";
 import NewsletterImage from "../static/images/Newsletter-image.png";
 import Button from "./Button";
 
-const Newsletter = () => {
+const Newsletter = ({width}) => {
   return (
     <div className="newsletter-container">
-      {document.documentElement.clientWidth < 600 ? (
+      {width <= 1024 ? (
         <>
           <div className="newsletter-text">
             <h1>
-              want to get notified when any <br />
+              want to get notified when any
               product receives a price drop?
             </h1>
             <input placeholder="enter e-mail address"></input>

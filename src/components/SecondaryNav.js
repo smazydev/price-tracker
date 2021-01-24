@@ -2,10 +2,10 @@ import React from "react";
 import Heart from "../static/images/heart.png";
 import ItemSorter from "./ItemSorter";
 
-const SecondaryNav = () => {
+const SecondaryNav = ({width}) => {
   return (
     <div className="sec-container no-border">
-      {document.documentElement.clientWidth < 600 ? (
+      {width <= 1024 ? (
         <>
           <ItemSorter
             labelOne={"Best Prices"}
@@ -19,7 +19,7 @@ const SecondaryNav = () => {
           />
         </>
       ) : (
-        <>
+        <div>
           <ItemSorter
             labelOne={"Best Prices"}
             labelTwo={"Trending Products"}
@@ -39,7 +39,7 @@ const SecondaryNav = () => {
           <button className="favorite">
             <img src={Heart} alt="favorite button" />
           </button>
-        </>
+        </div>
       )}
     </div>
   );
